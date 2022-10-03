@@ -22,7 +22,7 @@ export const Layout = ({ children }: any): JSX.Element => {
     },
   ];
   return (
-    <div style={{margin: "2rem 24rem"}}>
+    <div style={{margin: "2rem 24rem 0px"}}>
       <HeaderResponsive links={links} />
       <main >{children}</main>
       <Footer />

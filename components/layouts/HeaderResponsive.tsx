@@ -9,6 +9,7 @@ import {
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { memo } from "react";
 
 import type { HeaderResponsiveProps } from "../../types/type";
 import { ColorSchemeToggle } from "../ColorSchemeToggle";
@@ -82,9 +83,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-
-
-export function HeaderResponsive({ links }: HeaderResponsiveProps) {
+export const HeaderResponsive = memo(({ links }: HeaderResponsiveProps) => {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
@@ -126,4 +125,4 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
       </Container>
     </Header>
   );
-}
+});
