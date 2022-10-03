@@ -1,18 +1,38 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
-import { MantineProvider } from "@mantine/core";
+import { useState } from "react";
+import {
+  ColorScheme,
+  ColorSchemeProvider,
+  MantineProvider,
+} from "@mantine/core";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   return (
     <>
       <Head>
         <title>Yuta's Profile</title>
       </Head>
-      <MantineProvider withGlobalStyles withNormalizeCSS>
-        <Component {...pageProps} />
-      </MantineProvider>
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{
+            fontFamily: "serif",
+            colorScheme: colorScheme,
+          }}
+        >
+          <Component {...pageProps} />
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   );
 }
