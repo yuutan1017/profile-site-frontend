@@ -9,6 +9,7 @@ import {
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import Link from "next/link";
 import { memo } from "react";
 
 import type { HeaderResponsiveProps } from "../../types/type";
@@ -84,21 +85,15 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export const HeaderResponsive = memo(({ links }: HeaderResponsiveProps) => {
-  const [opened, { toggle, close }] = useDisclosure(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link)}
-      onClick={(event) => {
-        event.preventDefault();
-        close();
-      }}
-    >
-      {link.label}
-    </a>
+    <Link key={link.label} href={link.link} passHref>
+      <a className={cx(classes.link)}>
+        {link.label}
+      </a>
+    </Link>
   ));
 
   return (

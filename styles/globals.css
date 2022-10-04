@@ -1,4 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   /* outline: magenta solid 1px */
-
 }

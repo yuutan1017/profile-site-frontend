@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        <div style={{ height: "100vh" }}>main</div>
+        <div className="min-h-screen sm:mx-10 p-6">main</div>
       </Layout>
     </>
   );

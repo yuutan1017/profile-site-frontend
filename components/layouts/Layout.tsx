@@ -9,20 +9,20 @@ export const Layout = ({ children }: any): JSX.Element => {
       label: "Features",
     },
     {
-      link: "/pricing",
-      label: "Pricing",
+      link: "/skills",
+      label: "Skills",
     },
     {
-      link: "/learn",
-      label: "Learn",
+      link: "/works",
+      label: "Works",
     },
     {
-      link: "/community",
-      label: "Community",
+      link: "https://github.com/yuutan1017/profile-site-remake",
+      label: "Source",
     },
   ];
   return (
-    <div style={{margin: "2rem 24rem 0px"}}>
+    <div className="2xl:mx-96 xl:mx-64 lg:mx-48 md:mx-24 mx-5 mt-5">
       <HeaderResponsive links={links} />
       <main >{children}</main>
       <Footer />
