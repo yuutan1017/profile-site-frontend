@@ -16,7 +16,7 @@ function ThreeScene() {
         position={[0, 0.7, 0]}
         floatIntensity={5}
       >
-        <ModelApple_blue rotation={[0.9, 1, 0.1]}/>
+        <ModelApple_blue rotation={[0.9, 1, 0.1]} />
       </Float>
     </>
   );
