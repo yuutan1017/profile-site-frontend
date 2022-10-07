@@ -1,19 +1,19 @@
 import React from "react";
 import { Group } from "@mantine/core";
-import { ModelApple_Yellow } from "../3D/ModelApple_yellow";
-import { ModelApple_Blue } from "../3D/ModelApple_Blue";
-import { ModelApple_Pink } from "../3D/ModelApple_Pink";
-import { ModelApple_Rainbow } from "../3D/ModelApple.Rainbow";
-import { ModelApple_Cyber } from "../3D/ModelApple_Cyber";
+import { Model_Yellow } from "../3D/Model_Yellow";
+import { Model_Blue } from "../3D/Model_Blue";
+import { Model_Pink } from "../3D/Model_Pink";
+import { Model_Rainbow } from "../3D/Model_Rainbow";
+import { Model_Cyber } from "../3D/Model_Cyber";
 
 const Material = (): JSX.Element => {
   return (
     <Group spacing={30} className="flex flex-row justify-center">
-      <ModelApple_Yellow />
-      <ModelApple_Cyber />
-      <ModelApple_Blue />
-      <ModelApple_Pink />
-      <ModelApple_Rainbow />
+      <Model_Yellow />
+      <Model_Cyber />
+      <Model_Blue />
+      <Model_Pink />
+      <Model_Rainbow />
     </Group>
   );
 };

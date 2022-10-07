@@ -21,7 +21,7 @@ function ThreeScene() {
   );
 }
 
-export const ModelApple_Yellow = () => {
+export const Model_Yellow = () => {
   return (
     <div className="xl:h-24 xl:w-24 sm:h-16 sm:w-16 h-10 w-10">
       <Canvas>

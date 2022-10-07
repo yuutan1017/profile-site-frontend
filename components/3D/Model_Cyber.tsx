@@ -1,7 +1,7 @@
 import React from "react";
 import { Float } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { ModelApple_rainbow } from "../../public/ModelApple_rainbow";
+import { ModelApple_cyber } from "../../public/ModelApple_cyber";
 
 function ThreeScene() {
   return (
@@ -15,13 +15,13 @@ function ThreeScene() {
         position={[0, 0.4, 0]}
         floatIntensity={5}
       >
-        <ModelApple_rainbow rotation={[0.6, 1, 0.1]} />
+        <ModelApple_cyber rotation={[0.6, 1, 0.1]} />
       </Float>
     </>
   );
 }
 
-export const ModelApple_Rainbow = () => {
+export const Model_Cyber = () => {
   return (
     <div className="xl:h-24 xl:w-24 sm:h-16 sm:w-16 h-10 w-10">
       <Canvas>

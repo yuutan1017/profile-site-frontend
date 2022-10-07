@@ -1,7 +1,7 @@
 import { Center, Text } from "@mantine/core";
 import React, { memo } from "react";
 
-export const Footer = memo(() => {
+export const Footer = () => {
   return (
     <Center>
       <Text component="span" align="center" p={8} m={15}>
@@ -9,4 +9,5 @@ export const Footer = memo(() => {
       </Text>
     </Center>
   );
-});
+};
+

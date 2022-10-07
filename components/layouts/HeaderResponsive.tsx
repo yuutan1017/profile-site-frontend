@@ -84,22 +84,20 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const HeaderResponsive = memo(({ links }: HeaderResponsiveProps) => {
+export const HeaderResponsive = ({ links }: HeaderResponsiveProps) => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
     <Link key={link.label} href={link.link} passHref>
-      <a className={cx(classes.link)}>
-        {link.label}
-      </a>
+      <a className={cx(classes.link)}>{link.label}</a>
     </Link>
   ));
 
   return (
     <Header height={HEADER_HEIGHT} mb={20} className={classes.root}>
       <Container className={classes.header}>
-        <Text size="xl">Yuta's Profile</Text>
+        <Text size="xl">Yuta&apos;s Profile</Text>
         <Group spacing={6} className={classes.links}>
           {items}
         </Group>
@@ -120,4 +118,4 @@ export const HeaderResponsive = memo(({ links }: HeaderResponsiveProps) => {
       </Container>
     </Header>
   );
-});
+};

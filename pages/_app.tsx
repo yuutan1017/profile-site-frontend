@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
-        <title>Yuta's Profile</title>
+        <title>Yuta&apos;s Profile</title>
       </Head>
       <ColorSchemeProvider
         colorScheme={colorScheme}
