@@ -97,10 +97,10 @@ export const HeaderResponsive = memo(({ links }: HeaderResponsiveProps) => {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={100} className={classes.root}>
+    <Header height={HEADER_HEIGHT} mb={20} className={classes.root}>
       <Container className={classes.header}>
         <Text size="xl">Yuta's Profile</Text>
-        <Group spacing={5} className={classes.links}>
+        <Group spacing={6} className={classes.links}>
           {items}
         </Group>
         <Burger

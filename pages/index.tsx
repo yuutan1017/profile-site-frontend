@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import { Layout } from "../components/layouts/Layout";
+import { Material } from "../components/layouts/Material";
 
 const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        <div className="min-h-screen sm:mx-10 p-6">main</div>
+        <Material />
       </Layout>
     </>
   );
