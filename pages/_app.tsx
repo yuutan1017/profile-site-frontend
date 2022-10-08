@@ -10,7 +10,7 @@ import {
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   return (

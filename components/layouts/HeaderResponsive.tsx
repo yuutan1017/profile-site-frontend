@@ -10,9 +10,6 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
-import { memo } from "react";
-
-import type { HeaderResponsiveProps } from "../../types/type";
 import { ColorSchemeToggle } from "../ColorSchemeToggle";
 
 const HEADER_HEIGHT = 65;
@@ -84,22 +81,35 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const HeaderResponsive = ({ links }: HeaderResponsiveProps) => {
+export const HeaderResponsive = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
-  const items = links.map((link) => (
-    <Link key={link.label} href={link.link} passHref>
-      <a className={cx(classes.link)}>{link.label}</a>
-    </Link>
-  ));
+  const LINK = () => {
+    return (
+      <>
+        <Link href="/about" passHref>
+          <a className={cx(classes.link)}>About</a>
+        </Link>
+        <Link href="/skills" passHref>
+          <a className={cx(classes.link)}>Skills</a>
+        </Link>
+        <Link href="/works" passHref>
+          <a className={cx(classes.link)}>Works</a>
+        </Link>
+        <Link href="https://github.com/yuutan1017/profile-site-remake" passHref>
+          <a className={cx(classes.link)}>Source</a>
+        </Link>
+      </>
+    );
+  };
 
   return (
     <Header height={HEADER_HEIGHT} mb={20} className={classes.root}>
       <Container className={classes.header}>
         <Text size="xl">Yuta&apos;s Profile</Text>
         <Group spacing={6} className={classes.links}>
-          {items}
+          <LINK />
         </Group>
         <Burger
           opened={opened}
@@ -111,7 +121,7 @@ export const HeaderResponsive = ({ links }: HeaderResponsiveProps) => {
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
-              {items}
+              <LINK />
             </Paper>
           )}
         </Transition>
