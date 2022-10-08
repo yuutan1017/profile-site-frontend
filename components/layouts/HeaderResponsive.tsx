@@ -98,17 +98,19 @@ export const HeaderResponsive = () => {
           <a className={cx(classes.link)}>Works</a>
         </Link>
         <Link href="https://github.com/yuutan1017/profile-site-remake" passHref>
-          <a className={cx(classes.link)}>Source</a>
+          <a className={cx(classes.link)} target="_blank">
+            Source
+          </a>
         </Link>
       </>
     );
   };
 
   return (
-    <Header height={HEADER_HEIGHT} mb={20} className={classes.root}>
+    <Header height={HEADER_HEIGHT} mb={60} className={classes.root}>
       <Container className={classes.header}>
         <Text size="xl">Yuta&apos;s Profile</Text>
-        <Group spacing={6} className={classes.links}>
+        <Group spacing={8} className={classes.links}>
           <LINK />
         </Group>
         <Burger

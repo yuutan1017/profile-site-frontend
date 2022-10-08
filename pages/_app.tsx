@@ -8,6 +8,7 @@ import {
   MantineProvider,
 } from "@mantine/core";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("dark");
@@ -30,7 +31,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
             colorScheme: colorScheme,
           }}
         >
-          <Component {...pageProps} />
+          <AnimatePresence>
+            <Component {...pageProps} />
+          </AnimatePresence>
         </MantineProvider>
       </ColorSchemeProvider>
     </>

@@ -3,12 +3,13 @@ import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 
 import { Layout } from "../components/layouts/Layout";
+import { TopArticle } from "../components/topArticle";
 
 const Material = dynamic(() => import("../components/layouts/Material"), {
   ssr: false,
   loading: () => (
     <div className="flex justify-center">
-      <Loader variant="bars" size="lg" />
+      <Loader variant="oval" size="lg" />
     </div>
   ),
 });
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <Material />
+        <TopArticle />
       </Layout>
     </>
   );
