@@ -19,23 +19,23 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>Yuta&apos;s Profile</title>
       </Head>
-      <ColorSchemeProvider
-        colorScheme={colorScheme}
-        toggleColorScheme={toggleColorScheme}
-      >
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={{
-            fontFamily: "serif",
-            colorScheme: colorScheme,
-          }}
+      <AnimatePresence>
+        <ColorSchemeProvider
+          colorScheme={colorScheme}
+          toggleColorScheme={toggleColorScheme}
         >
-          <AnimatePresence>
+          <MantineProvider
+            withGlobalStyles
+            withNormalizeCSS
+            theme={{
+              fontFamily: "serif",
+              colorScheme: colorScheme,
+            }}
+          >
             <Component {...pageProps} />
-          </AnimatePresence>
-        </MantineProvider>
-      </ColorSchemeProvider>
+          </MantineProvider>
+        </ColorSchemeProvider>
+      </AnimatePresence>
     </>
   );
 }

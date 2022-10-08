@@ -1,7 +1,7 @@
 import React from "react";
 import { Float } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { ModelApple_yellow } from "../../public/ModelApple_yellow";
+import { ModelApple_yellow } from "../../public/model/ModelApple_yellow";
 
 function ThreeScene() {
   return (

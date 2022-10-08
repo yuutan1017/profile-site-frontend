@@ -8,7 +8,7 @@ import { Model_Cyber } from "../3D/Model_Cyber";
 
 const Material = (): JSX.Element => {
   return (
-    <Group spacing={30} className="flex flex-row justify-center">
+    <Group className="flex flex-row justify-center">
       <Model_Yellow />
       <Model_Cyber />
       <Model_Blue />
