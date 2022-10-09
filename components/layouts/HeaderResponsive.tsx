@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
-import { ColorSchemeToggle } from "../ColorSchemeToggle";
+import { ColorSchemeToggle } from "./ColorSchemeToggle";
 
 const HEADER_HEIGHT = 65;
 

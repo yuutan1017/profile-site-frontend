@@ -3,9 +3,12 @@ import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 
 import { Layout } from "../components/layouts/Layout";
+import { Skills } from "../components/Skills";
 import { TopArticle } from "../components/TopArticle";
 
-const Material = dynamic(() => import("../components/layouts/Material"), {
+// import Material  from "../components/layouts/Material";
+
+const Material = dynamic(() => import("../components/Material"), {
   ssr: false,
   loading: () => (
     <div className="flex justify-center">
@@ -20,6 +23,7 @@ const Home: NextPage = () => {
       <Layout>
         <Material />
         <TopArticle />
+        <Skills />
       </Layout>
     </>
   );

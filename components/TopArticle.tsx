@@ -4,38 +4,34 @@ import { IconPhoneCall, IconAt } from "@tabler/icons";
 
 import { AnimatedText } from "./motion/AnimatedText";
 
-const useStyles = createStyles((theme) => ({
-  icon: {
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[3]
-        : theme.colors.gray[5],
-  },
-
-  name: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-  },
-}));
-
 export const TopArticle = () => {
-  const { classes } = useStyles();
   return (
     <div className="mt-12">
-      <div className="flex items-center justify-center text-2xl">
-        <AnimatedText text="Thankyou for Visiting!!" />
+      <div className="flex items-center justify-center sm:text-3xl text-2xl">
+        <AnimatedText text="Thankyou For Visiting!!" />
       </div>
-      <div className="mt-10 mx-2">
-        <Group>
-          <Avatar src="/images/demo1.jpg" size={94} radius="md" />
-          <div>
-            <Text size="xl" weight={500} className={classes.name}>
+      <div className="mt-20">
+        <Group className="justify-center">
+          <div className="">
+            <Text weight={600} className="text-2xl">
               Yuta N
             </Text>
-            <Text size="md" weight={500} className={classes.name}>
-              はじめまして。ユウタと申します。飲食店勤務5年目です。
-              趣味でプログラミングを始め、のめり込んでいくうちに仕事として携わっていきたいと思い、転職を決意。
-              直近ではフロントエンドを中心に勉強中です。
-            </Text>
+            <div className="mt-4">
+              <Text size="sm">
+                はじめまして。ユウタと申します。飲食店勤務5年目です。
+              </Text>
+              <Text size="sm">
+                趣味でプログラミングを始め、のめり込んでいくうちに仕事として携わっていきたいと思い、転職を決意。
+              </Text>
+              <Text size="sm">直近ではフロントエンドを中心に勉強中です。</Text>
+            </div>
+          </div>
+          <div className="mt-5">
+            <Avatar
+              src="/images/top.jpeg"
+              size={120}
+              className="rounded-full"
+            />
           </div>
         </Group>
       </div>

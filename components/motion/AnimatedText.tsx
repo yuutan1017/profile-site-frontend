@@ -31,7 +31,7 @@ export const AnimatedText = ({ text }: any) => {
       animate="visible"
     >
       {words.map((word: string, idx: number) => (
-        <motion.p className="mx-1" key={idx} variants={child}>
+        <motion.p className="mx-2" key={idx} variants={child}>
           {word}
         </motion.p>
       ))}
