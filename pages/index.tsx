@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout>
-        {/* <Material /> */}
+        <Material />
         <TopArticle />
       </Layout>
     </>
