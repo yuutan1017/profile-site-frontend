@@ -28,8 +28,9 @@ export const TopArticle = () => {
           </div>
           <div className="mt-5">
             <Avatar
+              alt="topImage"
               src="/images/top.jpeg"
-              size={120}
+              size={130}
               className="rounded-full"
             />
           </div>
