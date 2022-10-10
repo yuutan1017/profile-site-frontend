@@ -1,8 +1,9 @@
 import React from "react";
-import { createStyles, Avatar, Text, Group } from "@mantine/core";
-import { IconPhoneCall, IconAt } from "@tabler/icons";
+import Image from "next/image";
+import { Avatar, Text, Group } from "@mantine/core";
 
 import { AnimatedText } from "./motion/AnimatedText";
+
 
 export const TopArticle = () => {
   return (
@@ -26,11 +27,12 @@ export const TopArticle = () => {
               <Text size="sm">直近ではフロントエンドを中心に勉強中です。</Text>
             </div>
           </div>
-          <div className="mt-5">
-            <Avatar
+          <div className="mt-8">
+            <Image
               alt="topImage"
-              src="/images/top.jpeg"
-              size={130}
+              src="/images/top.jpg"
+              width={130}
+              height={110}
               className="rounded-full"
             />
           </div>

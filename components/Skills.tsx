@@ -20,7 +20,7 @@ const SkillBar = (props: SkillProps) => {
 
 
 export const Skills = () => {
-  const autoplay = useRef(Autoplay({ delay: 4000 }));
+  const autoplay = useRef(Autoplay({ delay: 6000 }));
   return (
     <div className="mt-12">
       <div className="mb-8 text-3xl">
@@ -72,7 +72,7 @@ export const Skills = () => {
             </Text>
           </Center>
           <Stack spacing="sm">
-            <SkillBar label="Git" value={70} color="#f0f0e8" />
+            <SkillBar label="Git" value={70} color="#e84d31" />
             <SkillBar label="AWS" value={60} color="#232f3e" />
             <SkillBar label="Docker" value={60} color="#2496ed" />
           </Stack>
