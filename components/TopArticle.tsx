@@ -1,20 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import { Avatar, Text, Group } from "@mantine/core";
+import { Text, Group } from "@mantine/core";
 
 import { AnimatedText } from "./motion/AnimatedText";
 
 
 export const TopArticle = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-20">
       <div className="flex items-center justify-center sm:text-3xl text-2xl">
         <AnimatedText text="Thankyou For Visiting!!" />
       </div>
       <div className="mt-20">
         <Group className="justify-center">
           <div className="">
-            <Text weight={600} className="text-2xl">
+            <Text weight={600} className="text-2xl border-b-2">
               Yuta N
             </Text>
             <div className="mt-4">

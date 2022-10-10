@@ -18,21 +18,20 @@ const SkillBar = (props: SkillProps) => {
   );
 };
 
-
 export const Skills = () => {
   const autoplay = useRef(Autoplay({ delay: 6000 }));
   return (
     <div className="mt-12">
-      <div className="mb-8 text-3xl">
-        <Text>|| skills</Text>
+      <div className="mb-14 text-2xl border-b-2">
+        <Text weight={600}>Skills</Text>
       </div>
       <Carousel
-        sx={{ maxWidth: 520 }}
+        sx={{ maxWidth: 622 }}
         mx="auto"
         slideGap="lg"
         loop
         withControls={false}
-        height={350}
+        height={370}
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={autoplay.current.reset}
@@ -72,8 +71,9 @@ export const Skills = () => {
             </Text>
           </Center>
           <Stack spacing="sm">
-            <SkillBar label="Git" value={70} color="#e84d31" />
             <SkillBar label="AWS" value={60} color="#232f3e" />
+            <SkillBar label="Git" value={70} color="#e84d31" />
+
             <SkillBar label="Docker" value={60} color="#2496ed" />
           </Stack>
         </Carousel.Slide>

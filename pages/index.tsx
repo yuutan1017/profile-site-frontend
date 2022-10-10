@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { Layout } from "../components/layouts/Layout";
 import { Skills } from "../components/Skills";
 import { TopArticle } from "../components/TopArticle";
+import { Works } from "../components/Works";
 
 // import Material  from "../components/layouts/Material";
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         <Material />
         <TopArticle />
         <Skills />
+        <Works />
       </Layout>
     </>
   );
