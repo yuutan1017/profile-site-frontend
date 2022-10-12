@@ -13,13 +13,17 @@ const data = [
   {
     title: "育児休業給付金　計算ツール",
     image: "/images/benefits.jpg",
-    description: "育休中に働く場合の条件や給付される金額、お金のことにを中心にまとめています。",
+    alt: "育児休業給付金　計算ツール",
+    description:
+      "育休中に働く場合の条件や給付される金額、お金のことにを中心にまとめています。",
     href: "https://paternity-leave.vercel.app/",
   },
   {
     title: "ウェブスクレイピング",
     image: "/images/webScraping.jpg",
-    description: "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。",
+    alt: "ウェブスクレイピング",
+    description:
+      "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。",
   },
 ];
 
@@ -37,12 +41,14 @@ export function Works() {
       className={cx(classes.card)}
     >
       <AspectRatio ratio={1920 / 1080}>
-        <Image src={article.image} />
+        <Image src={article.image} alt={article.alt} />
       </AspectRatio>
       <Text mt={16} mb={16} weight={600}>
         {article.title}
       </Text>
-      <Text size="sm" color="dimmed">{article.description}</Text>
+      <Text size="sm" color="dimmed">
+        {article.description}
+      </Text>
     </Card>
   ));
 
