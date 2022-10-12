@@ -30,7 +30,7 @@ export const Skills = () => {
         </Text>
       </div>
       <Carousel
-        sx={{ maxWidth: 622 }}
+        sx={{ maxWidth: 600 }}
         mx="auto"
         slideGap="lg"
         loop
