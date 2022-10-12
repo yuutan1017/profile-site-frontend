@@ -1,5 +1,5 @@
+import Link from "next/link";
 import {
-  createStyles,
   Header,
   Container,
   Group,
@@ -9,77 +9,10 @@ import {
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import Link from "next/link";
+
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
+import { useStyles } from "./style";
 
-const HEADER_HEIGHT = 65;
-
-const useStyles = createStyles((theme) => ({
-  root: {
-    position: "relative",
-  },
-
-  dropdown: {
-    position: "absolute",
-    top: HEADER_HEIGHT,
-    left: 0,
-    right: 0,
-    zIndex: 0,
-    borderTopRightRadius: 0,
-    borderTopLeftRadius: 0,
-    borderTopWidth: 0,
-    overflow: "hidden",
-
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  header: {
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    height: "100%",
-  },
-
-  links: {
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  burger: {
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
-  },
-
-  link: {
-    display: "block",
-    lineHeight: 1,
-    padding: "8px 12px",
-    borderRadius: theme.radius.sm,
-    textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-
-    "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[2],
-    },
-
-    [theme.fn.smallerThan("sm")]: {
-      borderRadius: 0,
-      padding: theme.spacing.md,
-    },
-  },
-}));
 
 export const HeaderResponsive = () => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -107,7 +40,7 @@ export const HeaderResponsive = () => {
   };
 
   return (
-    <Header height={HEADER_HEIGHT} mb={60} className={classes.root}>
+    <Header height={65} mb={60} className={classes.root}>
       <Container className={classes.header}>
         <Text size="xl">Yuta&apos;s Profile</Text>
         <Group spacing={8} className={classes.links}>

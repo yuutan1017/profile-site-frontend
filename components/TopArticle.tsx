@@ -3,19 +3,22 @@ import Image from "next/image";
 import { Text, Group } from "@mantine/core";
 
 import { AnimatedText } from "./motion/AnimatedText";
+import { useStyles } from "./layouts/style";
 
 
 export const TopArticle = () => {
+  const { classes, cx } = useStyles();
   return (
     <div className="mt-20">
-      <div className="flex items-center justify-center sm:text-3xl text-2xl">
-        <AnimatedText text="Thankyou For Visiting!!" />
+      <div className="flex flex-col items-center justify-center sm:text-3xl text-xl">
+        <AnimatedText text="Welcome and thanks for" />
+        <AnimatedText text="visiting my website!!" />
       </div>
       <div className="mt-20">
         <Group className="justify-center">
           <div className="">
-            <Text weight={600} className="text-2xl border-b-2">
-              Yuta N
+            <Text weight={600} className={cx(classes.chapter)}>
+              About
             </Text>
             <div className="mt-4">
               <Text size="sm">

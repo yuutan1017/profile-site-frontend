@@ -3,6 +3,7 @@ import { Center, Progress, Stack, Text } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+import { useStyles } from "./layouts/style";
 import type { SkillProps } from "../types/type";
 
 const SkillBar = (props: SkillProps) => {
@@ -19,11 +20,14 @@ const SkillBar = (props: SkillProps) => {
 };
 
 export const Skills = () => {
+  const { classes, cx } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 6000 }));
   return (
     <div className="mt-12">
-      <div className="mb-14 text-2xl border-b-2">
-        <Text weight={600}>Skills</Text>
+      <div className="mb-14">
+        <Text className={cx(classes.chapter)} weight={600}>
+          Skills
+        </Text>
       </div>
       <Carousel
         sx={{ maxWidth: 622 }}
