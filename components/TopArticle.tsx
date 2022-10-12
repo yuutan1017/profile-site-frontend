@@ -16,7 +16,7 @@ export const TopArticle = () => {
       </div>
       <div className="mt-20">
         <Group className="justify-center">
-          <div className="">
+          <div>
             <Text weight={600} className={cx(classes.chapter)}>
               About
             </Text>

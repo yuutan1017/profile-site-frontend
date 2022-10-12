@@ -13,7 +13,6 @@ import { useDisclosure } from "@mantine/hooks";
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
 import { useStyles } from "./style";
 
-
 export const HeaderResponsive = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
@@ -47,6 +46,9 @@ export const HeaderResponsive = () => {
           <LINK />
         </Group>
         <Burger
+          id="burger"
+          role="button"
+          aria-label="burger"
           opened={opened}
           onClick={toggle}
           className={classes.burger}

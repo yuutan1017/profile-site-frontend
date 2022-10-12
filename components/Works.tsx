@@ -1,11 +1,5 @@
-import {
-  SimpleGrid,
-  Card,
-  Image,
-  Text,
-  Container,
-  AspectRatio,
-} from "@mantine/core";
+import Image from "next/image";
+import { SimpleGrid, Card, Text, Container, AspectRatio } from "@mantine/core";
 
 import { useStyles } from "./layouts/style";
 
@@ -40,9 +34,7 @@ export function Works() {
       href={article.href}
       className={cx(classes.card)}
     >
-      <AspectRatio ratio={1920 / 1080}>
-        <Image src={article.image} alt={article.alt} />
-      </AspectRatio>
+      <Image src={article.image} alt={article.alt} width={300} height={200} />
       <Text mt={16} mb={16} weight={600}>
         {article.title}
       </Text>
