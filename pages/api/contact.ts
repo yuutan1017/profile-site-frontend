@@ -1,6 +1,15 @@
 const nodemailer = require("nodemailer");
 
-export default function sendMail(req, res) {
+export default function sendMail(
+  req: { body: { name: any; message: string; email: string } },
+  res: {
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      end: { (): void; new (): any };
+    };
+  }
+) {
   const transporter = nodemailer.createTransport({
     host: process.env.USER,
     service: "gmail",
@@ -28,7 +37,7 @@ export default function sendMail(req, res) {
     `,
   };
 
-  transporter.sendMail(toHostMailData, (error, response) => {
+  transporter.sendMail(toHostMailData, (error: any, response: any) => {
     console.log(error || response);
     res.status(200).end();
   });
