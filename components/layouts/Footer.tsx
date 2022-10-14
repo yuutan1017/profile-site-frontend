@@ -1,5 +1,5 @@
 import { Center, Text } from "@mantine/core";
-import React, { memo } from "react";
+import React from "react";
 
 export const Footer = () => {
   return (

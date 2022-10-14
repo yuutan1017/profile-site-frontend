@@ -7,3 +7,9 @@ export interface SkillProps {
   value: number;
   color: string;
 }
+
+export interface ContactInputs {
+  name: string;
+  email: string;
+  message: string;
+}
