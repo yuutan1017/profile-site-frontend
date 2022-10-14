@@ -1,40 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const variants = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      delay: 0.7,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 70,
+  },
+};
+
 export const AnimatedText = ({ text }: any) => {
   const words = text.split(" ");
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.025, delayChildren: 0.04 },
-    },
-  };
-
-  const child = {
-    hidden: {
-      y: "200%",
-
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1 },
-    },
-    visible: {
-      y: 0,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 },
-    },
-  };
-
   return (
-    <motion.div
+    <motion.article
       className="flex overflow-hidden"
-      variants={container}
+      variants={variants}
       initial="hidden"
       animate="visible"
     >
       {words.map((word: string, idx: number) => (
-        <motion.p className="mx-2" key={idx} variants={child}>
+        <motion.p className="mx-2" key={idx}>
           {word}
         </motion.p>
       ))}
-    </motion.div>
+    </motion.article>
   );
 };

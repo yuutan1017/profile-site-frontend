@@ -16,11 +16,11 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          {/* <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@NYou0611" />
-          <meta name="twitter:title" content="" />
-          <meta name="twitter:description" content="" />
-          <meta name="twitter:image" content="" /> */}
+          <meta name="twitter:title" content="Yuta'Profile" />
+          <meta name="twitter:description" content="プロフィールサイト" />
+          <meta name="twitter:image" content="" />
         </Head>
         <body>
           <Main />

@@ -83,7 +83,6 @@ export const useStyles = createStyles((theme) => ({
     border: "1px solid",
 
     "&:hover": {
-      transform: "scale(1.05)",
       boxShadow: theme.shadows.lg,
     },
   },

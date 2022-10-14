@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import { Center, Progress, Stack, Text } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -19,18 +20,32 @@ const SkillBar = (props: SkillProps) => {
   );
 };
 
+const variants = {
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2, delay: 1.1 },
+  },
+  hidden: { opacity: 0, y: 70 },
+};
+
 export const Skills = () => {
   const { classes, cx } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 6000 }));
   return (
-    <div className="mt-12">
+    <motion.div
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      className="mt-12"
+    >
       <div className="mb-14">
         <Text className={cx(classes.chapter)} weight={600}>
           Skills
         </Text>
       </div>
       <Carousel
-        sx={{ maxWidth: 600 }}
+        sx={{ maxWidth: 700 }}
         mx="auto"
         slideGap="lg"
         loop
@@ -82,6 +97,6 @@ export const Skills = () => {
           </Stack>
         </Carousel.Slide>
       </Carousel>
-    </div>
+    </motion.div>
   );
 };

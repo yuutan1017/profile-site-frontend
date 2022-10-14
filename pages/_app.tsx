@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
             withGlobalStyles
             withNormalizeCSS
             theme={{
-              fontFamily: "cursive",
+              fontFamily: "inherit",
               colorScheme: colorScheme,
             }}
           >

@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { SimpleGrid, Card, Text, Container, AspectRatio } from "@mantine/core";
+import { SimpleGrid, Card, Text, Container } from "@mantine/core";
 
 import { useStyles } from "./layouts/style";
 
@@ -34,7 +35,7 @@ export function Works() {
       href={article.href}
       className={cx(classes.card)}
     >
-      <Image src={article.image} alt={article.alt} width={300} height={200} />
+      <Image src={article.image} alt={article.alt} width={340} height={200} />
       <Text mt={16} mb={16} weight={600}>
         {article.title}
       </Text>
@@ -44,8 +45,17 @@ export function Works() {
     </Card>
   ));
 
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.2, delay: 1.3 },
+    },
+    hidden: { opacity: 0, y: 70 },
+  };
+
   return (
-    <>
+    <motion.div variants={variants} initial="hidden" animate="visible">
       <div className="mb-10">
         <Text className={cx(classes.chapter)} weight={600}>
           Works
@@ -56,6 +66,6 @@ export function Works() {
           {cards}
         </SimpleGrid>
       </Container>
-    </>
+    </motion.div>
   );
 }
