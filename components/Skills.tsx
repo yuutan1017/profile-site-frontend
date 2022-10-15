@@ -20,11 +20,21 @@ const SkillBar = (props: SkillProps) => {
   );
 };
 
+const Remarks = ({ children }: any) => {
+  return (
+    <Center className="flex flex-col mt-14">
+      <Text size="lg" align="justify">
+        {children}
+      </Text>
+    </Center>
+  );
+};
+
 const variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1.2, delay: 1.1 },
+    transition: { duration: 1.2, delay: 0.8 },
   },
   hidden: { opacity: 0, y: 70 },
 };
@@ -67,6 +77,9 @@ export const Skills = () => {
             <SkillBar label="JavaScript" value={72} color="#f1e05a" />
             <SkillBar label="TypeScript" value={72} color="#2b7489" />
           </Stack>
+          <Remarks>
+            fksdajlasdajfkjasflkadjlajfj
+          </Remarks>
         </Carousel.Slide>
 
         <Carousel.Slide>
@@ -86,13 +99,13 @@ export const Skills = () => {
         <Carousel.Slide>
           <Center>
             <Text size="xl" align="justify">
-              DevOps
+              Others
             </Text>
           </Center>
           <Stack spacing="sm">
             <SkillBar label="AWS" value={60} color="#232f3e" />
             <SkillBar label="Git" value={70} color="#e84d31" />
-
+            <SkillBar label="Linux" value={55} color="#ffe100" />
             <SkillBar label="Docker" value={60} color="#2496ed" />
           </Stack>
         </Carousel.Slide>

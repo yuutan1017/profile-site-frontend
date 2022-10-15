@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 export default function sendMail(
-  req: { body: { name: any; message: string; email: string } },
+  req: { body: { name: any; message: string; email: string; subject: string } },
   res: {
     status: (arg0: number) => {
       (): any;
@@ -33,6 +33,7 @@ export default function sendMail(
     html: `
       <p><b> 氏名 : ${req.body.name}</b></p>
       <p><b> メールアドレス : ${req.body.email}</b></p>
+      <p><b> 件名 : ${req.body.subject}</b></p>
       <p><b>${req.body.message}</b></p>
     `,
   };

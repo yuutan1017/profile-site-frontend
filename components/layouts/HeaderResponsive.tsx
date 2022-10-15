@@ -20,14 +20,11 @@ export const HeaderResponsive = () => {
   const LINK = () => {
     return (
       <>
-        <Link href="/about" passHref>
-          <a className={cx(classes.link)}>About</a>
+        <Link href="/" passHref>
+          <a className={cx(classes.link)}>Top</a>
         </Link>
-        <Link href="/skills" passHref>
-          <a className={cx(classes.link)}>Skills</a>
-        </Link>
-        <Link href="/works" passHref>
-          <a className={cx(classes.link)}>Works</a>
+        <Link href="/contact" passHref>
+          <a className={cx(classes.link)}>Contact</a>
         </Link>
         <Link href="https://github.com/yuutan1017/profile-site-remake" passHref>
           <a className={cx(classes.link)} target="_blank">

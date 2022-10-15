@@ -8,7 +8,6 @@ import { Skills } from "../components/Skills";
 import { TopArticle } from "../components/TopArticle";
 import { Works } from "../components/Works";
 
-
 const Material = dynamic(() => import("../components/Material"), {
   ssr: false,
   loading: () => (
@@ -21,15 +20,9 @@ const Material = dynamic(() => import("../components/Material"), {
 const Home: NextPage = () => {
   return (
     <>
-      <Layout>
-        <Material />
-        <TopArticle />
-        <Skills />
-        <Works />
-        <Link href="/contact" passHref>
-          <a>contact</a>
-        </Link>
-      </Layout>
+      <TopArticle />
+      <Skills />
+      <Works />
     </>
   );
 };

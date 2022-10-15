@@ -18,8 +18,8 @@ const data = [
     image: "/images/webScraping.jpg",
     alt: "ウェブスクレイピング",
     description:
-      "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。"+
-      "web操作はseleniumで行いまいした。"
+      "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。" +
+      "web操作はseleniumで行いまいした。",
   },
 ];
 
@@ -50,20 +50,24 @@ export function Works() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.2, delay: 1.3 },
+      transition: { duration: 1.2, delay: 1.1 },
     },
     hidden: { opacity: 0, y: 70 },
   };
 
   return (
     <motion.div variants={variants} initial="hidden" animate="visible">
-      <div className="mb-10">
+      <div className="mb-10 mt-20">
         <Text className={cx(classes.chapter)} weight={600}>
           Works
         </Text>
       </div>
       <Container py="xl">
-        <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+        <SimpleGrid
+          className="sm:mx-6"
+          cols={2}
+          breakpoints={[{ maxWidth: "sm", cols: 1 }]}
+        >
           {cards}
         </SimpleGrid>
       </Container>
