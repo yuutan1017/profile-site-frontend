@@ -8,15 +8,6 @@ import { Skills } from "../components/Skills";
 import { TopArticle } from "../components/TopArticle";
 import { Works } from "../components/Works";
 
-const Material = dynamic(() => import("../components/Material"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex justify-center">
-      <Loader variant="oval" size="md" />
-    </div>
-  ),
-});
-
 const Home: NextPage = () => {
   return (
     <>
