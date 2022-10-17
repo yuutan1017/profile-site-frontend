@@ -66,13 +66,18 @@ export const Skills = () => {
           </Remarks>
         </Tabs.Panel>
 
-        <Tabs.Panel value="BackEnd" color="">
+        <Tabs.Panel value="BackEnd">
           <Stack className="mt-14" spacing="sm">
             <SkillBar label="Java" value={65} color="#b07219" />
             <SkillBar label="Python" value={70} color="#3572A5" />
             <SkillBar label="PHP" value={55} color="#4F5D95" />
             <SkillBar label="Ruby" value={50} color="#701516" />
           </Stack>
+          <Remarks>
+            SpringBoot、Djangoでの基礎的なコーディングが可能です
+            <br />
+            LaravelやRailsなども少し触ったことはあります。
+          </Remarks>
         </Tabs.Panel>
 
         <Tabs.Panel value="Others" color="">
@@ -82,6 +87,9 @@ export const Skills = () => {
             <SkillBar label="Linux" value={55} color="#ffe100" />
             <SkillBar label="Docker" value={60} color="#2496ed" />
           </Stack>
+          <Remarks>
+            かんがえちゆー
+          </Remarks>
         </Tabs.Panel>
       </Tabs>
     </motion.div>

@@ -16,6 +16,7 @@ export const ColorSchemeToggle = () => {
         checked={colorScheme === "dark"}
         onChange={() => toggleColorScheme()}
         size="lg"
+        label="toggleButton"
         onLabel={<BsSun color={theme.white} size={20} />}
         offLabel={<BsMoon color={theme.colors.gray[6]} size={20} />}
       />
