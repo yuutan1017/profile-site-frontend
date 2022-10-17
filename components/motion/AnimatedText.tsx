@@ -20,7 +20,7 @@ export const AnimatedText = ({ text }: any) => {
   const words = text.split(" ");
   return (
     <motion.article
-      className="flex overflow-hidden"
+      className="flex overflow-hidden justify-center"
       variants={variants}
       initial="hidden"
       animate="visible"

@@ -1,23 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "@mantine/form";
-import { TextInput, Textarea, Group, Text } from "@mantine/core";
-import { motion, MotionConfig } from "framer-motion";
+import { TextInput, Textarea, Group, Text, Loader } from "@mantine/core";
+import { motion } from "framer-motion";
 import { contact } from "../components/motion/Motion";
+import { AnimatedText } from "../components/motion/AnimatedText";
 
 export default function Contact() {
-  const onSubmit = async (data: any) => {
-    let config = {
-      method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}api/contact`,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: data,
-    };
-    await axios(config);
-  };
-
+  const [load, setLoad] = useState<boolean>(false);
+  const [visible, setVisible] = useState<boolean>(false);
   const form = useForm({
     initialValues: { name: "", email: "", subject: "", message: "" },
     validate: {
@@ -28,8 +19,49 @@ export default function Contact() {
     },
   });
 
+  const onSubmit = async (data: any) => {
+    let config = {
+      method: "post",
+      url: `${process.env.NEXT_PUBLIC_API_URL}api/contact`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+    setLoad(true);
+    await axios(config);
+    setLoad(false);
+    form.reset();
+    setVisible(true);
+  };
+
+  const AfterSubmit = () => {
+    return (
+      <div className="pt-4 pb-20">
+        <div
+          className={`flex flex-col items-center justify-center sm:text-3xl text-xl mt-20 ${
+            visible ? "visible" : "hidden"
+          }`}
+        >
+          <AnimatedText text="Thanks For Inquiry !!" />
+        </div>
+        <Loader
+          variant="bars"
+          size={50}
+          m="auto"
+          className={`${load ? "visible" : "hidden"}`}
+        />
+      </div>
+    );
+  };
+
   return (
-    <motion.div variants={contact} initial="hidden" animate="visible">
+    <motion.div
+      variants={contact}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Group position="center" className="flex flex-col my-14 text-2xl">
         <Text>Contact Form</Text>
         <Text size="sm" mt="md">
@@ -73,6 +105,9 @@ export default function Contact() {
           </button>
         </Group>
       </form>
+
+      <AfterSubmit />
+      
     </motion.div>
   );
 }

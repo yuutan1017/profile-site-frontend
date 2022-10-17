@@ -32,4 +32,11 @@ export const contact = {
     transition: { duration: 1.2, delay: 0.5 },
   },
   hidden: { opacity: 0, y: 70 },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: {
+      duration: 0.7,
+    },
+  },
 };
