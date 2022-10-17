@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SimpleGrid, Card, Text, Container } from "@mantine/core";
 
 import { useStyles } from "./layouts/style";
+import { works } from "./motion/Motion";
 
 const data = [
   {
@@ -25,7 +26,6 @@ const data = [
 
 export function Works() {
   const { classes, cx } = useStyles();
-
   const cards = data.map((article) => (
     <Card
       key={article.title}
@@ -46,17 +46,8 @@ export function Works() {
     </Card>
   ));
 
-  const variants = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.2, delay: 1.1 },
-    },
-    hidden: { opacity: 0, y: 70 },
-  };
-
   return (
-    <motion.div variants={variants} initial="hidden" animate="visible">
+    <motion.div variants={works} initial="hidden" animate="visible">
       <div className="mb-10 mt-20">
         <Text className={cx(classes.chapter)} weight={600}>
           Works

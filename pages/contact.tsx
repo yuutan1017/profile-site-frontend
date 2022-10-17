@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "@mantine/form";
 import { TextInput, Textarea, Group, Text } from "@mantine/core";
+import { motion, MotionConfig } from "framer-motion";
+import { contact } from "../components/motion/Motion";
 
 export default function Contact() {
   const onSubmit = async (data: any) => {
@@ -27,7 +29,7 @@ export default function Contact() {
   });
 
   return (
-    <>
+    <motion.div variants={contact} initial="hidden" animate="visible">
       <Group position="center" className="flex flex-col my-14 text-2xl">
         <Text>Contact Form</Text>
         <Text size="sm" mt="md">
@@ -71,6 +73,6 @@ export default function Contact() {
           </button>
         </Group>
       </form>
-    </>
+    </motion.div>
   );
 }

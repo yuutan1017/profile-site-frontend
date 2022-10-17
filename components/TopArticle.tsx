@@ -4,15 +4,8 @@ import { Text } from "@mantine/core";
 
 import { AnimatedText } from "./motion/AnimatedText";
 import { useStyles } from "./layouts/style";
+import { topArticle } from "./motion/Motion";
 
-const variants = {
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1.2, delay: 0.5 },
-  },
-  hidden: { opacity: 0, y: 70 },
-};
 
 export const TopArticle = () => {
   const { classes, cx } = useStyles();
@@ -23,7 +16,7 @@ export const TopArticle = () => {
         <AnimatedText text="visiting my website!!" />
       </div>
       <motion.section
-        variants={variants}
+        variants={topArticle}
         initial="hidden"
         animate="visible"
         className="mt-20"

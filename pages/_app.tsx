@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -20,25 +20,26 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>Yuta&apos;s Profile</title>
       </Head>
-      <AnimatePresence>
-        <ColorSchemeProvider
-          colorScheme={colorScheme}
-          toggleColorScheme={toggleColorScheme}
+
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{
+            fontFamily: "inherit",
+            colorScheme: colorScheme,
+          }}
         >
-          <MantineProvider
-            withGlobalStyles
-            withNormalizeCSS
-            theme={{
-              fontFamily: "inherit",
-              colorScheme: colorScheme,
-            }}
-          >
+          <AnimatePresence>
             <Layout>
               <Component {...pageProps} />
             </Layout>
-          </MantineProvider>
-        </ColorSchemeProvider>
-      </AnimatePresence>
+          </AnimatePresence>
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   );
 }
