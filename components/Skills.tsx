@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Center, Progress, Stack, Text, Tabs } from "@mantine/core";
 
@@ -60,7 +59,7 @@ export const Skills = () => {
             <SkillBar label="TypeScript" value={72} color="#2b7489" />
           </Stack>
           <Remarks>
-            主にReact、Next.jsを中心に開発しています。
+            主にReact、Next.jsを中心に勉強し開発しています。
             <br />
             VueやNuxt.jsも少し知見はあります。
           </Remarks>

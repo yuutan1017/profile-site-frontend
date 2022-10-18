@@ -1,5 +1,5 @@
-import React from "react";
 import { Group } from "@mantine/core";
+
 import { Model_Yellow } from "./3D/Model_Yellow";
 import { Model_Blue } from "./3D/Model_Blue";
 import { Model_Pink } from "./3D/Model_Pink";
