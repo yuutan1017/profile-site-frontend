@@ -40,8 +40,8 @@ export const TopArticle = () => {
             <Image
               alt="topImage"
               src="/images/top.jpg"
-              width={150}
-              height={120}
+              width="150"
+              height="120"
               className="rounded-2xl"
             />
           </div>

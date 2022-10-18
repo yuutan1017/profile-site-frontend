@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 import React, { useState } from "react";
 import {
   ColorScheme,
@@ -35,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         >
           <AnimatePresence>
             <Layout>
+              <DefaultSeo {...SEO} />
               <Component {...pageProps} />
             </Layout>
           </AnimatePresence>

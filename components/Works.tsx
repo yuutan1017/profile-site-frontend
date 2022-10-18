@@ -10,6 +10,7 @@ const data = [
     title: "育児休業給付金　計算ツール",
     image: "/images/benefits.jpg",
     alt: "育児休業給付金　計算ツール",
+    component: "a",
     description:
       "育休中に働く場合の条件や給付される金額、お金のことにを中心にまとめています。",
     href: "https://paternity-leave.vercel.app/",
@@ -18,6 +19,7 @@ const data = [
     title: "ウェブスクレイピング",
     image: "/images/webScraping.jpg",
     alt: "ウェブスクレイピング",
+    component: "article",
     description:
       "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。" +
       "web操作はseleniumで行いまいした。",
@@ -26,17 +28,17 @@ const data = [
 
 export function Works() {
   const { classes, cx } = useStyles();
-  const cards = data.map((article) => (
+  const cards = data.map((article: any) => (
     <Card
       key={article.title}
       p="md"
       target="_blank"
       radius="lg"
-      component="a"
+      component={article.component}
       href={article.href}
       className={cx(classes.card)}
     >
-      <Image src={article.image} alt={article.alt} width={340} height={200} />
+      <Image src={article.image} alt={article.alt} width="340" height="200" />
       <Text mt={16} mb={16} weight={600}>
         {article.title}
       </Text>
