@@ -14,20 +14,40 @@ import { ColorSchemeToggle } from "./ColorSchemeToggle";
 import { useStyles } from "./style";
 
 export const HeaderResponsive = () => {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
-  const LINK = () => {
+  const BurgerLink = () => {
     return (
       <>
         <Link href="/" passHref>
-          <a className={cx(classes.link)}>Top</a>
+          <a
+            className={cx(classes.link)}
+            onClick={() => {
+              close();
+            }}
+          >
+            Top
+          </a>
         </Link>
         <Link href="/contact" passHref>
-          <a className={cx(classes.link)}>Contact</a>
+          <a
+            className={cx(classes.link)}
+            onClick={() => {
+              close();
+            }}
+          >
+            Contact
+          </a>
         </Link>
         <Link href="https://github.com/yuutan1017/profile-site-remake" passHref>
-          <a className={cx(classes.link)} target="_blank">
+          <a
+            className={cx(classes.link)}
+            onClick={() => {
+              close();
+            }}
+            target="_blank"
+          >
             Source
           </a>
         </Link>
@@ -40,7 +60,7 @@ export const HeaderResponsive = () => {
       <Container className={classes.header}>
         <Text size="xl">Yuta&apos;s Profile</Text>
         <Group spacing={8} className={classes.links}>
-          <LINK />
+          <BurgerLink />
         </Group>
         <Burger
           id="burger"
@@ -55,7 +75,7 @@ export const HeaderResponsive = () => {
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
-              <LINK />
+              <BurgerLink />
             </Paper>
           )}
         </Transition>
