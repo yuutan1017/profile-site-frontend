@@ -59,7 +59,9 @@ export const Skills = () => {
             <SkillBar label="TypeScript" value={72} color="#2b7489" />
           </Stack>
           <Remarks>
-            主にReact、Next.jsを中心に勉強し開発しています。
+            HTML/CSSの基本的な使い方は理解しています。
+            <br />
+            Js/Tsでは調べながら簡易的なサイトは作成できます。
             <br />
             VueやNuxt.jsも少し知見はあります。
           </Remarks>
@@ -73,13 +75,15 @@ export const Skills = () => {
             <SkillBar label="Ruby" value={50} color="#701516" />
           </Stack>
           <Remarks>
-            SpringBoot、Djangoでの基礎的なコーディングが可能です
+            Pythonでseleniumを使ったウェブスクレイピングの経験や
             <br />
-            LaravelやRailsなども少し触ったことはあります。
+            Djangoでの簡易的なAPI作成の経験があります。
+            <br />
+            JavaやPHPは只今、勉強中です。
           </Remarks>
         </Tabs.Panel>
 
-        <Tabs.Panel value="Others" color="">
+        <Tabs.Panel value="Others">
           <Stack className="mt-14" spacing="sm">
             <SkillBar label="AWS" value={60} color="#232f3e" />
             <SkillBar label="Git" value={70} color="#e84d31" />
@@ -87,7 +91,9 @@ export const Skills = () => {
             <SkillBar label="Docker" value={60} color="#2496ed" />
           </Stack>
           <Remarks>
-            かんがえちゆー
+            Linux、Gitでの基本的なコマンド操作が可能です。
+            <br />
+            AWS、Dockerは只今、勉強中です。
           </Remarks>
         </Tabs.Panel>
       </Tabs>

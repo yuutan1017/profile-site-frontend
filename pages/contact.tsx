@@ -5,6 +5,7 @@ import { TextInput, Textarea, Group, Text, Loader } from "@mantine/core";
 import { motion } from "framer-motion";
 import { contact } from "../components/motion/Motion";
 import { AnimatedText } from "../components/motion/AnimatedText";
+import { useElementSize } from "@mantine/hooks";
 
 export default function Contact() {
   const [load, setLoad] = useState<boolean>(false);
@@ -43,7 +44,7 @@ export default function Contact() {
             visible ? "visible" : "hidden"
           }`}
         >
-          <AnimatedText text="Thanks For Inquiry !!" />
+          <AnimatedText text="ARIGATO !!" />
         </div>
         <Loader
           variant="bars"
@@ -91,23 +92,24 @@ export default function Contact() {
           {...form.getInputProps("subject")}
         />
         <Textarea
+          minRows={8}
           mt="sm"
           label="お問い合わせ"
           placeholder="Message"
           {...form.getInputProps("message")}
         />
-        <Group position="right" mt="md">
+        <Group position="right" mt="xl">
           <button
             type="submit"
             className="bg-indigo-500 py-3 px-5 rounded-md text-white"
           >
-            Submit
+            送信する
           </button>
         </Group>
       </form>
 
       <AfterSubmit />
-      
+
     </motion.div>
   );
 }
