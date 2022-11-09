@@ -38,7 +38,7 @@ export function Works() {
       href={article.href}
       className={cx(classes.card)}
     >
-      <Image src={article.image} alt={article.alt} width="340" height="200" />
+      <Image src={article.image} alt={article.alt} width="350" height="200" />
       <Text mt={16} mb={16} weight={600}>
         {article.title}
       </Text>

@@ -1,6 +1,5 @@
 import { createStyles } from "@mantine/core";
 
-
 export const useStyles = createStyles((theme) => ({
   //header
   root: {
@@ -67,7 +66,7 @@ export const useStyles = createStyles((theme) => ({
       padding: theme.spacing.md,
     },
   },
-  
+
   //章
   chapter: {
     borderBottom: "2px solid",

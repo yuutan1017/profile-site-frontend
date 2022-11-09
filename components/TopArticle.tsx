@@ -5,7 +5,7 @@ import { Text } from "@mantine/core";
 import { AnimatedText } from "./motion/AnimatedText";
 import { useStyles } from "./layouts/style";
 import { topArticle } from "./motion/Motion";
-
+import Link from "next/link";
 
 export const TopArticle = () => {
   const { classes, cx } = useStyles();
@@ -26,23 +26,31 @@ export const TopArticle = () => {
             About
           </Text>
         </div>
-        <div className="flex flex-col mx-3">
-          <div className="mt-8">
-            <Text size="sm">
+        <div className="xl:flex xl:flex-row-reverse xl:px-8 flex flex-col mx-1 mt-8">
+          <div className="mt-8 xl:pl-10">
+            <Text size="md">
               はじめまして。ユウタと申します。飲食店勤務5年目です。
             </Text>
-            <Text size="sm">
+            <Text size="md">
               趣味でプログラミングを始め、のめり込んでいくうちに仕事として携わっていきたいと思い、転職を決意。
             </Text>
-            <Text size="sm">直近ではフロントエンドを中心に勉強中です。</Text>
+            <Text size="md">
+              直近ではPHP/LaravelやJava/SpringBootを中心に学んでいます。
+            </Text>
+            <div className="flex flex-row mt-5 space-x-2">
+              <Text size="sm">GitHub : </Text>
+              <Link href="https://github.com/yuutan1017" passHref>
+                <a className="hover:text-blue-400 hover:border-b hover:border-b-blue-400">https://github.com/yuutan1017</a>
+              </Link>
+            </div>
           </div>
           <div className="mx-auto mt-8">
             <Image
               alt="topImage"
               src="/images/top.jpg"
-              width="150"
-              height="120"
-              className="rounded-2xl"
+              width="180"
+              height="160"
+              className="rounded-full xl:mt-4"
             />
           </div>
         </div>
