@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { SimpleGrid, Card, Text, Container } from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
 
 import { useStyles } from "./layouts/style";
 import { works } from "./motion/Motion";
-
 
 const data = [
   {
@@ -46,7 +46,7 @@ export function Works() {
       radius="lg"
       component={article.component}
       href={article.href}
-      className={cx(classes.card)}
+      className="sm:w-2/5 w-80 border sm:mx-3 mx-1"
     >
       <Image src={article.image} alt={article.alt} width="350" height="200" />
       <Text mt={16} mb={16} weight={600}>
@@ -73,16 +73,17 @@ export function Works() {
         <Text className={cx(classes.chapter)} weight={600}>
           Works
         </Text>
-      </div>
-      <Container py="xl">
-        <SimpleGrid
-          className="sm:mx-6"
-          cols={2}
-          breakpoints={[{ maxWidth: "sm", cols: 1 }]}
-        >
-          {cards}
-        </SimpleGrid>
-      </Container>
+      </div> 
+      <Carousel
+        className="sm:px-6"
+        loop
+        breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: 1 }]}
+        slideGap="xl"
+        mx="auto"
+        align="start"
+      >
+        <Carousel.Slide className="flex">{cards}</Carousel.Slide>
+      </Carousel>
     </motion.div>
   );
 }

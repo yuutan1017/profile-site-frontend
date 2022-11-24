@@ -74,11 +74,4 @@ export const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark" ? theme.colors.white : theme.colors.dark,
     fontSize: "24px",
   },
-
-  //works card
-  card: {
-    transition: "transform 150ms ease, box-shadow 150ms ease",
-    boxShadow: theme.shadows.xl,
-    border: "1px solid",
-  },
 }));
