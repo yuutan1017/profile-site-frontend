@@ -5,7 +5,6 @@ import { TextInput, Textarea, Group, Text, Loader } from "@mantine/core";
 import { motion } from "framer-motion";
 import { contact } from "../components/motion/Motion";
 import { AnimatedText } from "../components/motion/AnimatedText";
-import { useElementSize } from "@mantine/hooks";
 
 export default function Contact() {
   const [load, setLoad] = useState<boolean>(false);
@@ -109,7 +108,6 @@ export default function Contact() {
       </form>
 
       <AfterSubmit />
-
     </motion.div>
   );
 }

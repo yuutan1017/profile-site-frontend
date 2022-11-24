@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 import { SimpleGrid, Card, Text, Container } from "@mantine/core";
 
 import { useStyles } from "./layouts/style";
 import { works } from "./motion/Motion";
 
+
 const data = [
   {
     title: "育児休業給付金　計算ツール",
     image: "/images/benefits.jpg",
     alt: "育児休業給付金　計算ツール",
-    component: "a",
+    component: "article",
     description:
       "育休中に働く場合の条件や給付される金額、お金のことにを中心にまとめています。",
     href: "https://paternity-leave.vercel.app/",
@@ -28,10 +30,8 @@ const data = [
     title: "File Picker",
     image: "/images/FilePicker.jpg",
     alt: "File Picker",
-    component: "a",
-    description:
-      "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。" +
-      "web操作はseleniumで行いまいした。",
+    component: "article",
+    description: "File System Access APIを使い作成しました。",
     href: "https://upload-site.vercel.app/",
   },
 ];
@@ -55,6 +55,15 @@ export function Works() {
       <Text size="sm" color="dimmed">
         {article.description}
       </Text>
+      {article.href ? (
+        <div className="mt-6 hover:text-blue-500">
+          <Link href={article.href} passHref>
+            <a>デモページはこちら</a>
+          </Link>
+        </div>
+      ) : (
+        <></>
+      )}
     </Card>
   ));
 

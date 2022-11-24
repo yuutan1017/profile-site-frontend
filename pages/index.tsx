@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 
 import { Skills } from "../components/Skills";
-import { TopArticle } from "../components/TopArticle";
+import { About } from "../components/About";
 import { Works } from "../components/Works";
 
 const Home: NextPage = () => {
   return (
     <>
-      <TopArticle />
+      <About />
       <Skills />
       <Works />
     </>

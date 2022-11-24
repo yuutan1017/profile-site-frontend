@@ -7,7 +7,7 @@ import { useStyles } from "./layouts/style";
 import { topArticle } from "./motion/Motion";
 import Link from "next/link";
 
-export const TopArticle = () => {
+export const About = () => {
   const { classes, cx } = useStyles();
   return (
     <>
@@ -26,7 +26,7 @@ export const TopArticle = () => {
             About
           </Text>
         </div>
-        <div className="xl:flex xl:flex-row-reverse xl:px-8 flex flex-col mx-1 mt-8">
+        <div className="xl:flex xl:flex-row-reverse xl:px-8 flex flex-col mx-1 mt-12">
           <div className="mt-8 xl:pl-10">
             <Text size="md">
               はじめまして。ユウタと申します。飲食店勤務5年目です。
