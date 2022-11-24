@@ -24,6 +24,16 @@ const data = [
       "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。" +
       "web操作はseleniumで行いまいした。",
   },
+  {
+    title: "File Picker",
+    image: "/images/FilePicker.jpg",
+    alt: "File Picker",
+    component: "a",
+    description:
+      "現職でエクセルに打ち込む業務があり、それを自動化したいと思い勉強しました。" +
+      "web操作はseleniumで行いまいした。",
+    href: "https://upload-site.vercel.app/",
+  },
 ];
 
 export function Works() {

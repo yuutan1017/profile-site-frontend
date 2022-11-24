@@ -80,9 +80,5 @@ export const useStyles = createStyles((theme) => ({
     transition: "transform 150ms ease, box-shadow 150ms ease",
     boxShadow: theme.shadows.xl,
     border: "1px solid",
-
-    "&:hover": {
-      boxShadow: theme.shadows.lg,
-    },
   },
 }));
