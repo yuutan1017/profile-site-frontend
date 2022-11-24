@@ -7,13 +7,13 @@ import { Model_Rainbow } from "./3D/Model_Rainbow";
 import { Model_Cyber } from "./3D/Model_Cyber";
 
 const materialArray = [
-  <Model_Yellow />,
-  <Model_Blue />,
-  <Model_Pink />,
-  <Model_Rainbow />,
-  <Model_Cyber />,
+  <Model_Yellow key="0" />,
+  <Model_Blue key="1" />,
+  <Model_Pink key="2" />,
+  <Model_Rainbow key="3" />,
+  <Model_Cyber key="4" />,
 ];
-
+console.log(materialArray.keys());
 const Material = (): JSX.Element => {
   const numArray = [0, 1, 2, 3, 4];
 
@@ -24,17 +24,9 @@ const Material = (): JSX.Element => {
     numArray[random] = tmpStorage;
   }
 
-  // const material = numArray.map((i, idx) => (
-  //   <div key={idx}>{materialArray[i]}</div>
-  // ));
+  const material = numArray.map((i, idx) => <div key={idx}>{materialArray[i]}</div>);
 
-  return (
-    <Group className="flex flex-row justify-center">
-      {numArray.map((i, idx) => {
-        return <div key={idx}>{materialArray[i]}</div>;
-      })}
-    </Group>
-  );
+  return <Group className="flex flex-row justify-center">{material}</Group>;
 };
 
 export default Material;
