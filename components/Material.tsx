@@ -24,11 +24,17 @@ const Material = (): JSX.Element => {
     numArray[random] = tmpStorage;
   }
 
-  const material = numArray.map((i, idx) => (
-    <div key={idx}>{materialArray[i]}</div>
-  ));
+  // const material = numArray.map((i, idx) => (
+  //   <div key={idx}>{materialArray[i]}</div>
+  // ));
 
-  return <Group className="flex flex-row justify-center">{material}</Group>;
+  return (
+    <Group className="flex flex-row justify-center">
+      {numArray.map((i, idx) => {
+        return <div key={idx}>{materialArray[i]}</div>;
+      })}
+    </Group>
+  );
 };
 
 export default Material;
