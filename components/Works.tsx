@@ -9,6 +9,7 @@ import { works } from "./motion/Motion";
 
 const data = [
   {
+    id: 0,
     title: "育児休業給付金　計算ツール",
     image: "/images/benefits.jpg",
     alt: "育児休業給付金　計算ツール",
@@ -18,6 +19,7 @@ const data = [
     href: "https://paternity-leave.vercel.app/",
   },
   {
+    id: 1,
     title: "ウェブスクレイピング",
     image: "/images/webScraping.jpg",
     alt: "ウェブスクレイピング",
@@ -27,6 +29,7 @@ const data = [
       "web操作はseleniumで行いまいした。",
   },
   {
+    id: 2,
     title: "File Picker",
     image: "/images/FilePicker.jpg",
     alt: "File Picker",
@@ -39,7 +42,10 @@ const data = [
 export function Works() {
   const { classes, cx } = useStyles();
   const cards = data.map((article: any) => (
-    <Carousel.Slide className="flex justify-center items-center my-4">
+    <Carousel.Slide
+      key={article.id}
+      className="flex justify-center items-center my-4"
+    >
       <Card
         key={article.title}
         p="md"
@@ -76,7 +82,12 @@ export function Works() {
   ));
 
   return (
-    <motion.div className="mb-10" variants={works} initial="hidden" animate="visible">
+    <motion.div
+      className="mb-10"
+      variants={works}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="mb-10 mt-20">
         <Text className={cx(classes.chapter)} weight={600}>
           Works
