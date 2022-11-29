@@ -16,7 +16,7 @@ const data = [
     component: "article",
     description:
       "育休中に働く場合の条件や給付される金額、お金のことにを中心にまとめています。",
-    href: "https://paternity-leave.vercel.app/",
+    href: "https://benefits-calculator.vercel.app/",
   },
   {
     id: 1,
