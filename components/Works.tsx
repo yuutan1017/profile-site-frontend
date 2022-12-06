@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Card, Text } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import { useStyles } from "./layouts/style";
 import { works } from "./motion/Motion";
@@ -41,6 +43,7 @@ const data = [
 
 export function Works() {
   const { classes, cx } = useStyles();
+  const autoplay = useRef(Autoplay({ delay: 8000 }));
   const cards = data.map((article: any) => (
     <Carousel.Slide
       key={article.id}
@@ -94,7 +97,9 @@ export function Works() {
         </Text>
       </div>
       <Carousel
-        withIndicators
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
         loop
         breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: 2 }]}
         slideGap="xl"

@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 
 export function ModelApple_rainbow(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF(
-    "/assets/ModelApple_rainbow.glb"
+    "/glb/ModelApple_rainbow.glb"
   ) as unknown as GLTFResult;
   return (
     <group {...props} dispose={null} scale={14}>

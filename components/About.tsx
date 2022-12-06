@@ -12,9 +12,10 @@ export const About = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center sm:text-3xl text-xl mt-20">
-        <AnimatedText text="Welcome and thanks for" />
+        <AnimatedText text="Welcome and thank you for" />
         <AnimatedText text="visiting my website!!" />
       </div>
+      
       <motion.section
         variants={topArticle}
         initial="hidden"
@@ -40,7 +41,7 @@ export const About = () => {
             <div className="flex flex-row mt-5 space-x-2">
               <Text size="sm">GitHub : </Text>
               <Link href="https://github.com/yuutan1017" passHref>
-                <a className="hover:text-blue-400 hover:border-b hover:border-b-blue-400">https://github.com/yuutan1017</a>
+                <a className="hover:text-blue-400">https://github.com/yuutan1017</a>
               </Link>
             </div>
           </div>
