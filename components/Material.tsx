@@ -1,5 +1,6 @@
 import { Group } from "@mantine/core";
 import { memo } from "react";
+import { motion } from "framer-motion";
 
 import { Model_Yellow } from "./3D/Model_Yellow";
 import { Model_Blue } from "./3D/Model_Blue";
@@ -26,7 +27,16 @@ const Material = memo((): JSX.Element => {
   }
 
   const material = numArray.map((i, idx) => (
-    <div key={idx}>{materialArray[i]}</div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 1.2, delay: 1, ease: "circIn" },
+      }}
+      key={idx}
+    >
+      {materialArray[i]}
+    </motion.div>
   ));
 
   return <Group className="flex flex-row justify-center">{material}</Group>;

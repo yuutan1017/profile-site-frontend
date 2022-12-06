@@ -85,7 +85,7 @@ export function Works() {
   ));
 
   return (
-    <motion.div
+    <motion.section
       className="mb-10"
       variants={works}
       initial="hidden"
@@ -108,6 +108,6 @@ export function Works() {
       >
         {cards}
       </Carousel>
-    </motion.div>
+    </motion.section>
   );
 }

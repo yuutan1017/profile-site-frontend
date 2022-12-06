@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import axios from "axios";
 import { useForm } from "@mantine/form";
 import { TextInput, Textarea, Group, Text, Loader } from "@mantine/core";
-import { motion } from "framer-motion";
 import { contact } from "../components/motion/Motion";
-import { AnimatedText } from "../components/motion/AnimatedText";
 
 export default function Contact() {
   const [load, setLoad] = useState<boolean>(false);
@@ -43,7 +42,7 @@ export default function Contact() {
             visible ? "visible" : "hidden"
           }`}
         >
-          <AnimatedText text="ARIGATO !!" />
+          <div className="flex overflow-hidden justify-center">ARIGATO !!</div>
         </div>
         <Loader
           variant="bars"
@@ -60,7 +59,6 @@ export default function Contact() {
       variants={contact}
       initial="hidden"
       animate="visible"
-      exit="exit"
     >
       <Group position="center" className="flex flex-col my-14 text-2xl">
         <Text>Contact Form</Text>

@@ -4,13 +4,18 @@ import { Loader } from "@mantine/core";
 
 import { Footer } from "./Footer";
 import { HeaderResponsive } from "./HeaderResponsive";
-
+// import Material from "../Material";
 
 const Material = dynamic(() => import("../Material"), {
   ssr: false,
   loading: () => (
     <div className="flex justify-center">
-      <Loader variant="oval" size="md" />
+      {/* <Loader
+        className="xl:h-24 xl:w-24 sm:h-16 sm:w-16 h-10 w-10"
+        variant="dots"
+        size="md"
+      /> */}
+      <div className="xl:h-24 xl:w-24 sm:h-16 sm:w-16 h-10 w-10"></div>
     </div>
   ),
 });

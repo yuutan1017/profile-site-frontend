@@ -28,7 +28,7 @@ const Remarks = ({ children }: any) => {
 export const Skills = () => {
   const { classes, cx } = useStyles();
   return (
-    <motion.div
+    <motion.section
       variants={skills}
       initial="hidden"
       animate="visible"
@@ -69,8 +69,8 @@ export const Skills = () => {
 
         <Tabs.Panel value="BackEnd">
           <Stack className="mt-14" spacing="sm">
-            <SkillBar label="Java" value={65} color="#b07219" />
             <SkillBar label="Python" value={70} color="#3572A5" />
+            <SkillBar label="Java" value={65} color="#b07219" />
             <SkillBar label="PHP" value={55} color="#4F5D95" />
             <SkillBar label="Ruby" value={50} color="#701516" />
           </Stack>
@@ -97,6 +97,6 @@ export const Skills = () => {
           </Remarks>
         </Tabs.Panel>
       </Tabs>
-    </motion.div>
+    </motion.section>
   );
 };

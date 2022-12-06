@@ -2,22 +2,39 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Text } from "@mantine/core";
 
-import { AnimatedText } from "./motion/AnimatedText";
 import { useStyles } from "./layouts/style";
-import { topArticle } from "./motion/Motion";
+import { about, topArticle } from "./motion/Motion";
 import Link from "next/link";
+
+const TopArticle = ({ text }: any) => {
+  const words = text.split(" ");
+  return (
+    <motion.div
+      className="flex overflow-hidden justify-center"
+      variants={topArticle}
+      initial="hidden"
+      animate="visible"
+    >
+      {words.map((word: string, idx: number) => (
+        <motion.p className="mx-2" key={idx}>
+          {word}
+        </motion.p>
+      ))}
+    </motion.div>
+  );
+};
 
 export const About = () => {
   const { classes, cx } = useStyles();
   return (
     <>
       <div className="flex flex-col items-center justify-center sm:text-3xl text-xl mt-20">
-        <AnimatedText text="Welcome and thank you for" />
-        <AnimatedText text="visiting my website!!" />
+        <TopArticle text="Welcome and thank you for" />
+        <TopArticle text="visiting my website!!" />
       </div>
       
       <motion.section
-        variants={topArticle}
+        variants={about}
         initial="hidden"
         animate="visible"
         className="mt-20"
