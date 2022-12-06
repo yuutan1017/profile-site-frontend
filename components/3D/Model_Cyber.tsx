@@ -9,6 +9,8 @@ function ThreeScene() {
       <ambientLight />
       <pointLight position={[5, 5, 5]} intensity={1} />
       <pointLight position={[-3, -3, 2]} />
+      <pointLight color={0xffffff} position={[0, 10, 0]} />
+
       <Float
         speed={2}
         rotationIntensity={5.0}

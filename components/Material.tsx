@@ -1,4 +1,5 @@
 import { Group } from "@mantine/core";
+import { memo } from "react";
 
 import { Model_Yellow } from "./3D/Model_Yellow";
 import { Model_Blue } from "./3D/Model_Blue";
@@ -13,8 +14,8 @@ const materialArray = [
   <Model_Rainbow key="3" />,
   <Model_Cyber key="4" />,
 ];
-console.log(materialArray.keys());
-const Material = (): JSX.Element => {
+
+const Material = memo((): JSX.Element => {
   const numArray = [0, 1, 2, 3, 4];
 
   for (let i = numArray.length - 1; i >= 0; i--) {
@@ -29,6 +30,6 @@ const Material = (): JSX.Element => {
   ));
 
   return <Group className="flex flex-row justify-center">{material}</Group>;
-};
+});
 
 export default Material;
