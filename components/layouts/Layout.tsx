@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 import { Footer } from "./Footer";
-import { HeaderResponsive } from "./HeaderResponsive";
+import { _Header } from "./Header";
 // import Material from "../Material";
 
 const Material = dynamic(() => import("../Material"), {
@@ -17,7 +17,7 @@ const Material = dynamic(() => import("../Material"), {
 export const Layout = ({ children }: any): JSX.Element => {
   return (
     <div className="2xl:mx-96 xl:mx-64 lg:mx-48 md:mx-24 sm:px-10 mx-5 mt-5 ">
-      <HeaderResponsive />
+      <_Header />
       <Material />
       <main className="sm:mx-24 mx-3">{children}</main>
       <Footer />

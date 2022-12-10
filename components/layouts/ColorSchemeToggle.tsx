@@ -11,8 +11,9 @@ export const ColorSchemeToggle = () => {
   const theme = useMantineTheme();
 
   return (
-    <Group position="center" my={30}>
+    <Group position="center">
       <Switch
+        className="flex items-center"
         checked={colorScheme === "dark"}
         onChange={() => toggleColorScheme()}
         size="lg"

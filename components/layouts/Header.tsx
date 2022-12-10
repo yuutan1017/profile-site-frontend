@@ -11,9 +11,9 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 
 import { ColorSchemeToggle } from "./ColorSchemeToggle";
-import { useStyles } from "./style";
+import { useStyles } from "../../styles/style";
 
-export const HeaderResponsive = () => {
+export const _Header = () => {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
 

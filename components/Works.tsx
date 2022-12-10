@@ -6,7 +6,7 @@ import { Card, Text } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-import { useStyles } from "./layouts/style";
+import { useStyles } from "../styles/style";
 import { works } from "./motion/Motion";
 
 const data = [

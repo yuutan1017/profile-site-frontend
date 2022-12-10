@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Text } from "@mantine/core";
 
-import { useStyles } from "./layouts/style";
+import { useStyles } from "../styles/style";
 import { about, topArticle } from "./motion/Motion";
 import Link from "next/link";
 

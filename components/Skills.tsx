@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Center, Progress, Stack, Text, Tabs } from "@mantine/core";
 
-import { useStyles } from "./layouts/style";
+import { useStyles } from "../styles/style";
 import type { SkillProps } from "../types/type";
 import { skills } from "./motion/Motion";
 
