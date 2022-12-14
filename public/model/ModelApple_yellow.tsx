@@ -56,4 +56,4 @@ export function ModelApple_yellow(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/assets/ModelApple_yellow.glb");
+useGLTF.preload("/glb/ModelApple_yellow.glb");

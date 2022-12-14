@@ -56,4 +56,4 @@ export function ModelApple_pink(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/assets/ModelApple_pink.glb");
+useGLTF.preload("/glb/ModelApple_pink.glb");

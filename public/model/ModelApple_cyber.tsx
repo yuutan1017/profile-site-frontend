@@ -56,4 +56,4 @@ export function ModelApple_cyber(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/assets/ModelApple_cyber.glb");
+useGLTF.preload("/glb/ModelApple_cyber.glb");

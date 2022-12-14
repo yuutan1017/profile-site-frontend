@@ -56,4 +56,4 @@ export function ModelApple_rainbow(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/assets/ModelApple_rainbow.glb");
+useGLTF.preload("/glb/ModelApple_rainbow.glb");

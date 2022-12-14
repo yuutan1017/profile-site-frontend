@@ -16,7 +16,7 @@ const Material = dynamic(() => import("../Material"), {
 
 export const Layout = ({ children }: any): JSX.Element => {
   return (
-    <div className="2xl:mx-96 xl:mx-64 lg:mx-48 md:mx-24 sm:px-10 mx-5 mt-5 ">
+    <div className="2xl:mx-96 xl:mx-64 lg:mx-48 mx-5 mt-5">
       <_Header />
       <Material />
       <main className="sm:mx-24 mx-3">{children}</main>
