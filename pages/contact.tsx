@@ -32,6 +32,9 @@ export default function Contact() {
     setLoad(false);
     form.reset();
     setVisible(true);
+    setTimeout(() => {
+      setVisible(false);
+    }, 3000);
   };
 
   const AfterSubmit = () => {
@@ -55,11 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <motion.div
-      variants={contact}
-      initial="hidden"
-      animate="visible"
-    >
+    <motion.div variants={contact} initial="hidden" animate="visible">
       <Group position="center" className="flex flex-col my-14 text-2xl">
         <Text>Contact Form</Text>
         <Text size="sm" mt="md">
